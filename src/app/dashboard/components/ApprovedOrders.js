@@ -4,7 +4,7 @@ import { TiTick } from "react-icons/ti";
 
 const getApprovedReservations = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/approved", {
+    const res = await fetch("/api/approved", {
       cache: "no-store",
     });
     if (!res.ok) {

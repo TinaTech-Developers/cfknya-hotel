@@ -4,31 +4,33 @@ import Reservations from "../../../../models/reservations";
 
 export async function POST(request) {
   const {
-    fullname,
-    phone,
+    name,
+    surname,
+    address,
+    country,
+    email,
     arrivaldate,
     deptdate,
-    roomtype,
-    guests,
-    email,
-    message,
-    period,
-    payment,
+    kidsNo,
+    adultsNo,
+    book,
     price,
+    total,
   } = await request.json();
   await connectMongoDB();
   await Reservations.create({
-    fullname,
-    phone,
+    name,
+    surname,
+    address,
+    country,
+    email,
     arrivaldate,
     deptdate,
-    roomtype,
-    guests,
-    email,
-    message,
-    period,
-    payment,
+    kidsNo,
+    adultsNo,
+    book,
     price,
+    total,
   });
 
   return NextResponse.json({ message: "Reservation Created" }, { status: 201 });

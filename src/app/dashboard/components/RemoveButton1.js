@@ -9,7 +9,7 @@ function RemoveButton({ id }) {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/orders?id=${id}`, {
+      const res = await fetch(`/api/orders?id=${id}`, {
         method: "DELETE",
       });
 

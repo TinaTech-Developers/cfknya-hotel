@@ -4,7 +4,7 @@ import { TiTick } from "react-icons/ti";
 
 function ApprovedReservations() {
   const [approved, setApproved] = useState([]);
-  const APPROVED_URL = "http://localhost:3000/api/approvedOrders";
+  const APPROVED_URL = "/api/approvedOrders";
 
   useEffect(() => {
     async function fetchData() {

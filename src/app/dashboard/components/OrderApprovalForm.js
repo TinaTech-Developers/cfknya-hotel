@@ -29,7 +29,7 @@ function OrderApprovalForm({
       return;
     }
     try {
-      const res = await fetch("http://localhost:3000/api/approvedOrders", {
+      const res = await fetch("/api/approvedOrders", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

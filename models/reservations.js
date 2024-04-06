@@ -2,18 +2,18 @@ import mongoose, { Schema } from "mongoose";
 
 const reservationSchema = new Schema(
   {
-    fullname: String,
-    phone: String,
+    name: String,
+    surname: String,
+    address: String,
+    country: String,
+    email: String,
     arrivaldate: String,
     deptdate: String,
-    roomtype: String,
-    guests: String,
-    email: String,
-    message: String,
-    period: String,
-    payment: String,
-    newPrice: String,
-    newName: String,
+    kidsNo: String,
+    adultsNo: String,
+    book: String,
+    price: String,
+    total: String,
   },
   { timestamps: true }
 );

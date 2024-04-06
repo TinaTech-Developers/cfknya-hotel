@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import FillButton from "./FillButton";
 import Layout from "./Layout";
-import Select from "react-select";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
@@ -33,7 +31,7 @@ function OrderForm({ id, name, price, description, image }) {
       return;
     }
     try {
-      const res = await fetch("http://localhost:3000/api/orders", {
+      const res = await fetch("/api/orders", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

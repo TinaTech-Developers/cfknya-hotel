@@ -27,7 +27,7 @@ function ResApprovalForm({
       return;
     }
     try {
-      const res = await fetch("http://localhost:3000/api/approved", {
+      const res = await fetch("/api/approved", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

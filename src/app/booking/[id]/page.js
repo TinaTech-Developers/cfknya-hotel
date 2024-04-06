@@ -1,9 +1,9 @@
-import OrderForm from "@/components/OrderForm";
+import OrderForm from "@/app/components/OrderForm";
 import React from "react";
 
 const getRoomById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/rooms/${id}`, {
+    const res = await fetch(`/api/rooms/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
