@@ -9,7 +9,7 @@ import Header from "@/app/components/Header";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
-  const ORDERS_URL = "http://localhost:3000/api/orders";
+  const ORDERS_URL = "/api/orders";
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(ORDERS_URL);

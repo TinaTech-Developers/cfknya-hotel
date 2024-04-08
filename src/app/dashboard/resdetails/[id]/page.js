@@ -2,7 +2,7 @@ import React from "react";
 import ResApprovalForm from "../../components/ResApprovalForm";
 const getResById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/reservations/${id}`, {
+    const res = await fetch(`/api/reservations/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {

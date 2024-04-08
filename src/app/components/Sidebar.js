@@ -14,7 +14,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="w-20 p-4">
+    <div className="w-20 p-4 bg-white">
       <div className="flex flex-col items-center">
         <Link href={""}>
           <div className="bg-amber-800 text-white p-3 rounded-lg inline-block">

@@ -6,7 +6,7 @@ import { AuthProvider } from "@/app/Providers";
 export default function DashbordLayout({ children }) {
   return (
     <AuthProvider>
-      <div className="flex">
+      <div className="flex bg-white">
         <div>
           <Sidebar />
         </div>

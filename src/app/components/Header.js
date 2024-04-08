@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <div className="">
-      <div className="flex justify-between p-4 w-[95%] -mt-4 fixed bg-gray-200">
+      <div className="flex justify-between p-4 w-[95%] -mt-4 fixed bg-gray-400">
         <h1 className="font-semibold text-xl">Dashboard</h1>
         <h1>Welcome Back, Tinashe Phiri</h1>
       </div>

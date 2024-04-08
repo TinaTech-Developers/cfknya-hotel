@@ -10,7 +10,7 @@ import Header from "@/app/components/Header";
 function Customers() {
   const [reservations, setReservations] = useState([]);
 
-  const RSV_URL = "http://localhost:3000/api/reservations";
+  const RSV_URL = "/api/reservations";
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(RSV_URL);
