@@ -7,19 +7,20 @@ import { IoIosStar } from "react-icons/io";
 
 function Villas() {
   return (
-    <div className="flex flex-col items-center justify-center py-10">
+    <div className="flex flex-col items-center justify-center py-10 bg-white">
       <h1 className="text-gray-400 text-center  text-lg uppercase">
         our luxury villas
+        <hr className="p-[1px] bg-amber-800" />
       </h1>
-      <h2 className="text-5xl text-center py-4">Featured Villas</h2>
+      <h2 className="text-5xl text-center py-6">Featured Villas</h2>
       <div className="flex flex-wrap items-center justify-center gap-10">
-        <div className=" w-96 md:w-[700px] h-full border border-amber-950  hover:shadow-2xl">
+        <div className=" w-80 md:w-[700px] h-full border border-amber-950  hover:shadow-2xl">
           <Image
             src={"/IMG-20231122-WA0060.jpg"}
             alt=""
             width={400}
             height={500}
-            className=" w-96 md:w-[700px] object-contain"
+            className=" w-80 md:w-[700px] object-contain"
           />
           <p className="flex items-center justify-center text-white -translate-y-12 p-4">
             FETURED ROOM <IoIosStar />

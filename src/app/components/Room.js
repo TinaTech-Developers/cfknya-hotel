@@ -4,13 +4,13 @@ import Link from "next/link";
 
 function Room({ price, image }) {
   return (
-    <div className="w-96 h-96 border border-amber-900 bg-black ">
+    <div className=" w-80 md:w-96 h-96 border border-amber-900 bg-black ">
       <Image
         src={image}
         alt=""
         width={500}
         height={500}
-        className="w-96 h-96 object-cover "
+        className=" w-80 md:w-96 h-96 object-cover "
       />
       <div className="flex gap-2 text-white items-start justify-center -translate-y-10">
         <p>HOTEL ROOM</p>

@@ -6,7 +6,7 @@ function Welcome() {
   return (
     <div className="grid grid-cols-1 md:grid md:grid-cols-2">
       <div className="flex flex-col items-center justify-center p-4">
-        <h1 className="text-2xl md:text-5xl font-bold py-8">
+        <h1 className="text-2xl md:text-5xl font-medium py-8">
           {" "}
           Stay and Enjoy{" "}
         </h1>

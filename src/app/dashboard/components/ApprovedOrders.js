@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 import { TiTick } from "react-icons/ti";
 
-const getApprovedReservations = async () => {
-  try {
-    const res = await fetch("/api/approved", {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("failed to fetch data");
-    }
-    return res.json();
-  } catch (error) {
-    console.log("Error loading orders", error);
-  }
-};
+// const getApprovedReservations = async () => {
+//   try {
+//     const res = await fetch("/api/approved", {
+//       cache: "no-store",
+//     });
+//     if (!res.ok) {
+//       throw new Error("failed to fetch data");
+//     }
+//     return res.json();
+//   } catch (error) {
+//     console.log("Error loading orders", error);
+//   }
+// };
 
-async function ApprovedOrders() {
-  const { approved } = await getApprovedReservations();
+function ApprovedOrders() {
+  const [approved, setApproved] = useState([]);
+
+  const APVD_URL = "/api/approved";
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(APVD_URL);
+      const approved = await response.json();
+      setApproved(approved.approved);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="p-4">
       <h1 className="py-4 font-semibold">Approved Orders</h1>

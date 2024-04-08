@@ -21,7 +21,7 @@ const RoomInfo = ({ room }) => {
   const [adultsNo, setAdultsNo] = useState("");
   const [kidsNo, setKidsNo] = useState("");
   const [price, setPrice] = useState(room.price);
-  let [total, setTotal] = useState(Number(room.price) * Number(kidsNo));
+  let [total, setTotal] = useState("");
   const handleBook = async (e) => {
     e.preventDefault();
     e.preventDefault();
@@ -250,8 +250,10 @@ const RoomInfo = ({ room }) => {
                   <div className="font-bold border p-4">
                     <label className="mx-auto">Total Cost :</label>
                     <input
-                      value={Number(price) * Number(adultsNo)}
-                      onChange={(e) => setTotal(e.target.value)}
+                      value={total}
+                      onChange={(e) =>
+                        setTotal(Number(price) * Number(adultsNo))
+                      }
                       className="text-center"
                     />
                   </div>

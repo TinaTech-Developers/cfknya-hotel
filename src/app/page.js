@@ -14,7 +14,6 @@ export default function Home() {
     <Layout>
       <main>
         <Hero />
-        <div></div>
         <Welcome />
         <Villas />
         <View />
